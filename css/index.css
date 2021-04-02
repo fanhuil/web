@@ -49,6 +49,7 @@ img {
 	box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
 	position: fixed;
 	top:0;
+	z-index: 9999;
 }
 
 .header_content{
@@ -125,7 +126,7 @@ img {
 /*header end*/
 #content {
 	width: 1000px;
-	margin: 5px auto;
+	margin: 100px auto;
 }
 
 #c_left {
@@ -158,8 +159,8 @@ img {
 
 /*文章*/
 #c_left .content_text {
-	width: 730px;
-	margin-top: 5px;
+	/* width: 730px; */
+	/* margin-top: 5px; */
 }
 
 #c_left .content_text .wz {
@@ -200,7 +201,7 @@ img {
 }
 
 .wz dl {
-	width: 730px;
+	/* width: 730px; */
 	margin-top: 3px;
 }
 
@@ -326,6 +327,7 @@ img {
 #c_right .s_about img {
 	margin: 10px auto 10px;
 	padding-bottom: 10px;
+	height: auto;
 	border-bottom: 1px solid #555;
 }
 
