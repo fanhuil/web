@@ -9,7 +9,7 @@
 body {
 	font-size: 14px;
 	font-family: "微软雅黑";
-	background: #E3E3E5 url(../images/bg.jpg) 50% top scroll no-repeat;
+	background: #efefef;
 	color: #5d5d5d;
 }
 
@@ -74,7 +74,7 @@ img {
 #content #about_me {
 	width: 730px;
 	height: 500px;
-	background-color: #fff;
+	/* background-color: #fff; */
 }
 
 #about_me .about_content {

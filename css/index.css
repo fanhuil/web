@@ -41,20 +41,30 @@ img {
 
 /*end*/
 #header {
+	width: 100%;
+	height: 60px;
+	margin: 0 auto;
+	background-color: rgba(255,255,255,.9);
+	border-bottom: 1px solid #ddd;
+	box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+	position: fixed;
+	top:0;
+}
+
+.header_content{
 	display: flex;
 	justify-content: space-between;
+	align-items:center;
 	width: 1000px;
-	height: 40px;
+	height: 100%;
 	margin: 0 auto;
 }
 
-	
-
-#header h1 {
-	font-size: 24px;
-	color: #664666;
+#header span {
+	font-size: 22px;
+	color: #555;
 	padding: 10px 0 5px 0px;
-	font-weight: 600;
+	/* font-weight: 600; */
 }
 
 .header_right{
@@ -73,12 +83,12 @@ img {
 }
 
 #nav {
-	width: 1000px;
-	margin: 20px auto;
+	/* width: 1000px; */
+	/* margin: 20px auto; */
 }
 
 #nav ul li {
-	width: 140px;
+	width: 100px;
 	height: 30px;
 	line-height: 30px;
 	float: left;
@@ -87,7 +97,7 @@ img {
 }
 
 #nav ul li a {
-	color: #231818;
+	color: #555;
 	font-size: 16px;
 	width: 140px;
 	height: 30px;
@@ -98,19 +108,19 @@ img {
 	display: block;
 	width: 140px;
 	height: 30px;
-	background: #829696;
 	border-radius: 3px;
-	color: #fff;
+	color: #000;
 }
 
-#nava {
+#nav #nava {
 	display: block;
-	color: #fff;
+	color: #f65a8a;
 	width: 140px;
 	height: 30px;
-	background: #97b5b5;
 	border-radius: 3px;
 }
+
+
 
 /*header end*/
 #content {
@@ -119,8 +129,8 @@ img {
 }
 
 #c_left {
-	width: 730px;
-	background: #fff;
+	width: 68%;
+	/* background: #fff; */
 	border-radius: 1px;
 }
 
@@ -153,24 +163,32 @@ img {
 }
 
 #c_left .content_text .wz {
-	width: 725px;
+/* 	width: 725px;
 	margin: 5px 0px 10px 0px;
-	color: #1D1A1A;
+	color: #1D1A1A; */
+	background: rgba(255,255,255,0.8);
+    padding: 15px;
+    overflow: hidden;
+    color: #797b7c;
+    margin-bottom: 20px;
 }
 
 .wz h3 {
-	width: 300px;
+	font-size: 16px;
+	line-height: 25px;
+	text-shadow: #fff 1px 1px 1px;
+/* 	width: 300px;
 	height: 30px;
 	overflow: hidden;
 	line-height: 30px;
 	font-size: 17px;
 	font-weight: 500;
 	padding-left: 5px;
-	color: #325EBD;
+	color: #325EBD; */
 }
 
 .wz h3 a {
-	color: #D3535D;
+	color: #222;
 }
 
 .wz h3:hover {
@@ -200,10 +218,18 @@ img {
 }
 
 .wz dl dd {
-	float: left;
+	width: 96%;
+	margin: 20px 0 0 0;
+	line-height: 22px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+/* 	float: left;
 	width: 505px;
 	overflow: hidden;
-	margin-left: 5px;
+	margin-left: 5px; */
 }
 
 .wz dl dd .dd_text_1 {
@@ -276,7 +302,7 @@ img {
 /*left end*/
 /*right*/
 #c_right {
-	width: 260px;
+	width: 30%;
 }
 
 #c_right .s_about {
