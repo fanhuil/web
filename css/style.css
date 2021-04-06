@@ -40,7 +40,6 @@ img {
 
 /*end*/
 .weizi {
-	width: 730px;
 	height: 50px;
 	line-height: 50px;
 	background: url("../images/weizi.png") 7px 15px no-repeat;
@@ -74,7 +73,6 @@ img {
 #content #about_me {
 	width: 730px;
 	height: 500px;
-	/* background-color: #fff; */
 }
 
 #about_me .about_content {
@@ -438,13 +436,14 @@ span.bds_more {
 
 /*news*/
 #content #news {
-	width: 730px;
+	/* width: 730px; */
+	width: 68%;
 	background: #fff;
 	padding-bottom: 10px;
 }
 
 #news .news_content {
-	width: 710px;
+	/* width: 710px; */
 	margin-top: 10px;
 	padding: 0 10px;
 }
@@ -456,7 +455,7 @@ span.bds_more {
 }
 
 #news .news_content .news_top {
-	width: 710px;
+	/* width: 710px; */
 	height: 60px;
 }
 
@@ -465,6 +464,7 @@ span.bds_more {
 	color: #F00E71;
 	font-weight: 500;
 	height: 25px;
+	margin-bottom: 10px;
 	line-height: 25px;
 	text-align: center;
 }
@@ -501,7 +501,9 @@ span.bds_more {
 }
 
 #news .news_content .news_text {
-	width: 710px;
+	/* width: 710px; */
+	padding:20px;
+	line-height: 20px;
 }
 
 /*留言板*/
