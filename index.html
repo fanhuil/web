@@ -219,7 +219,6 @@
 				<p>桂ICP备19011879号-2</p>
 			</div>
 		</div>
-
 		<!--footer end-->
 
 		<script type="text/javascript">
@@ -230,7 +229,28 @@
 		</script>
 		<script type="text/javascript" src="js/nav.js"></script>
 		<script type="text/javascript">
-			console.log(window.document)
+			var o = new Object()
+			function Foo(){
+				
+			}
+			var f = new Foo()
+
+			console.log('=============关于Foo原型================')
+			console.log(f)
+			console.log(Foo)
+			console.log(f.__proto__)
+			console.log(Foo.prototype.__proto__)
+			console.log(Foo.prototype.constructor)
+			console.log('=============关于Object原型================')
+			console.log(o)
+			console.log(Object)
+			console.log(o.__proto__)
+			console.log(Object.prototype)
+			console.log(Object.prototype.constructor)
+			console.log('=============关于Function原型================')
+			console.log(Function)
+			console.log(Function.__proto__)
+			console.log(Function.prototype.constructor)
 		</script>
 	</body>
 </html>
