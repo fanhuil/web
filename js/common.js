@@ -1,5 +1,3 @@
-﻿
-
 var rmd_sta = 0;
 
 
@@ -62,85 +60,85 @@ var rmd_sta = 0;
 
 //});
 
-$(function () {
+$(function() {
 
 
 
-    var html = "";
+	var html = "";
 
-    html += '<div class="sd_main">';
+	html += '<div class="sd_main">';
 
-    html += '<div class="top">';
+	html += '<div class="top">';
 
-    html += '<div class="bg-1"></div>';
+	html += '<div class="bg-1"></div>';
 
-    html += '<div class="bg-2"></div>';
+	html += '<div class="bg-2"></div>';
 
-    html += '<div class="bg-3"></div>';
+	html += '<div class="bg-3"></div>';
 
-    html += '<div class="bg-4"></div>';
+	html += '<div class="bg-4"></div>';
 
-    html += '<div class="bg-5"></div>';
+	html += '<div class="bg-5"></div>';
 
-    html += '<div class="bg-6"></div>';
+	html += '<div class="bg-6"></div>';
 
-    html += '<div class="bg-7"></div>';
+	html += '<div class="bg-7"></div>';
 
-    html += '<div class="bg-8"></div>';
+	html += '<div class="bg-8"></div>';
 
-    html += '<div class="bg-9"></div>';
+	html += '<div class="bg-9"></div>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '<div class="sd_cen">';
+	html += '<div class="sd_cen">';
 
-    html += '<div class="txt">';
+	html += '<div class="txt">';
 
-    html += '<div class="cen1">';
+	html += '<div class="cen1">';
 
-    html += '<div class="img"></div>';
+	html += '<div class="img"></div>';
 
-    html += '<div class="item">';
+	html += '<div class="item">';
 
-    html += '<ul></ul>';
+	html += '<ul></ul>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '<div class="cen1">';
+	html += '<div class="cen1">';
 
-    html += '<div class="img"></div>';
+	html += '<div class="img"></div>';
 
-    html += '<div class="item">';
+	html += '<div class="item">';
 
-    html += '<ul></ul>';
+	html += '<ul></ul>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '<div class="cen1">';
+	html += '<div class="cen1">';
 
-    html += '<div class="img"></div>';
+	html += '<div class="img"></div>';
 
-   // html += '<div class="item">';
+	// html += '<div class="item">';
 
-    html += '<ul></ul>';
+	html += '<ul></ul>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '</div>';
+	html += '</div>';
 
-    html += '</div>'; //txt end
+	html += '</div>'; //txt end
 
-  
 
-    html += '</div>'; //sd_cen end
 
-    html += '</div>'; //sd_main end
+	html += '</div>'; //sd_cen end
 
-    $(document.body).append(html);
+	html += '</div>'; //sd_main end
+
+	$(document.body).append(html);
 
 
 
@@ -150,7 +148,7 @@ $(function () {
 
 });
 
- 
+
 
 
 
@@ -160,141 +158,147 @@ $(function () {
 
 function my_rmd() {
 
-    $(document.body).append('<div class="screen_msg" id="screen_msg"></div>');
+	$(document.body).append('<div class="screen_msg" id="screen_msg"></div>');
 
-    $(".screen_msg").height($(window).height());
+	$(".screen_msg").height($(window).height());
 
 
 
-    $("embed").each(function () {
+	$("embed").each(function() {
 
-        if ($(this).css("display") == "inline") {
+		if ($(this).css("display") == "inline") {
 
-            $(this).attr("rel", "holder");
+			$(this).attr("rel", "holder");
 
-            $(this).hide();
+			$(this).hide();
 
-        }
+		}
 
-    });
+	});
 
-    $("#screen_msg").css("background", "#000");
+	$("#screen_msg").css("background", "#000");
 
-    $("#screen_msg").css("opacity", "0");
+	$("#screen_msg").css("opacity", "0");
 
 
 
-    var ti = setTimeout(function () {
+	var ti = setTimeout(function() {
 
-        $(".sd_main").css("left", ($(document).width() - $(".sd_main").width()) / 2 + "px");
+		$(".sd_main").css("left", ($(document).width() - $(".sd_main").width()) / 2 + "px");
 
-        $(".sd_main").show();
+		$(".sd_main").show();
 
-        var a4_left = $(".a4").offset().left;
+		var a4_left = $(".a4").offset().left;
 
-        $(".a4_1").css("left", a4_left + "px");
+		$(".a4_1").css("left", a4_left + "px");
 
-        $(".a4_1").css("opacity", "1");
+		$(".a4_1").css("opacity", "1");
 
-        $(".a4_1").show();
+		$(".a4_1").show();
 
-        clearTimeout(ti);
+		clearTimeout(ti);
 
-    }, 500);
+	}, 500);
 
-    $("#screen_msg").animate({ opacity: '0.5' }, 1000);
+	$("#screen_msg").animate({
+		opacity: '0.5'
+	}, 1000);
 
-    var ie = ietester();
+	var ie = ietester();
 
-    if (ie <= 6) {
+	if (ie <= 6) {
 
-        $(window).unbind("scroll");
+		$(window).unbind("scroll");
 
-        $(window).scroll(function () {
+		$(window).scroll(function() {
 
-            $("#screen_msg").css("top", $(window).scrollTop() + "px");
+			$("#screen_msg").css("top", $(window).scrollTop() + "px");
 
-        });
+		});
 
-    }
+	}
 
-    var imgs = "";
+	var imgs = "";
 
-    var articles1 = "";
+	var articles1 = "";
 
-    var articles2 = "";
+	var articles2 = "";
 
-    var articles3 = "";
+	var articles3 = "";
 
-    if (rmd_sta > 0) {
+	if (rmd_sta > 0) {
 
-        $(".sd_main").css("top", "15px");
+		$(".sd_main").css("top", "15px");
 
-     
 
-        $(".sd_main").css("left", ($(document).width() - $(".sd_main").width()) / 2 + "px");
 
-        return;
+		$(".sd_main").css("left", ($(document).width() - $(".sd_main").width()) / 2 + "px");
 
-    }
+		return;
 
-    $.getScript("http://www.7y7.com/ajaxHandler/Handler.ashx?action=recmd2user1&r=" + Math.random(), function () {
+	}
 
-        var data = eval(recmd2user_json);
+	$.getScript("http://www.7y7.com/ajaxHandler/Handler.ashx?action=recmd2user1&r=" + Math.random(), function() {
 
-        var img_t = 0;
+		var data = eval(recmd2user_json);
 
-        var article_t = 0;
+		var img_t = 0;
 
-        for (i = 0; i < data.length; i++) {
+		var article_t = 0;
 
-            var href = ParseArticlePath(data[i].id, data[i].rootpath, data[i].isSubDomain1, data[i].isSubDomain2);
+		for (i = 0; i < data.length; i++) {
 
-            if (data[i].t == "article") {
+			var href = ParseArticlePath(data[i].id, data[i].rootpath, data[i].isSubDomain1, data[i]
+				.isSubDomain2);
 
-                if (article_t < 5)
+			if (data[i].t == "article") {
 
-                    articles1 += '<li><a href="' + href + '" target="_blank"  class="txt1" title="' + data[i].head + '">' + data[i].head_short + '</a></li>';
+				if (article_t < 5)
 
-                else if (article_t < 10)
+					articles1 += '<li><a href="' + href + '" target="_blank"  class="txt1" title="' + data[i]
+					.head + '">' + data[i].head_short + '</a></li>';
 
-                    articles2 += '<li><a href="' + href + '" target="_blank"  class="txt1" title="' + data[i].head + '">' + data[i].head_short + '</a></li>';
+				else if (article_t < 10)
 
-                else if (article_t < 15)
+					articles2 += '<li><a href="' + href + '" target="_blank"  class="txt1" title="' + data[i]
+					.head + '">' + data[i].head_short + '</a></li>';
 
-                    articles3 += '<li><a href="' + href + '" target="_blank"  class="txt1" title="' + data[i].head + '">' + data[i].head_short + '</a></li>';
+				else if (article_t < 15)
 
-                article_t++;
+					articles3 += '<li><a href="' + href + '" target="_blank"  class="txt1" title="' + data[i]
+					.head + '">' + data[i].head_short + '</a></li>';
 
-            }
+				article_t++;
 
-            else {
+			} else {
 
-                //imgs += '<li><a href="http://www.7y7.com/pic/' + getPath(data[i].id) + '" target="_blank"><img src="http://pic.7y7.com/' + ResizeImage(data[i].pic, "120x160") + '" width="120" height="160" />' + data[i].head + '</a></li>';
+				//imgs += '<li><a href="http://www.7y7.com/pic/' + getPath(data[i].id) + '" target="_blank"><img src="http://pic.7y7.com/' + ResizeImage(data[i].pic, "120x160") + '" width="120" height="160" />' + data[i].head + '</a></li>';
 
-                if (img_t < 3)
+				if (img_t < 3)
 
-                    $(".sd_cen .txt .cen1:eq(" + img_t + ") .img").html('<a href="http://www.7y7.com/pic/' + getPath(data[i].id) + '" target="_blank" title="' + data[i].head + '"><img src="http://pic.7y7.com/' + ResizeImage(data[i].pic, "120x160") + '"  /></a>');
+					$(".sd_cen .txt .cen1:eq(" + img_t + ") .img").html('<a href="http://www.7y7.com/pic/' +
+						getPath(data[i].id) + '" target="_blank" title="' + data[i].head +
+						'"><img src="http://pic.7y7.com/' + ResizeImage(data[i].pic, "120x160") + '"  /></a>');
 
-                img_t++;
+				img_t++;
 
-            }
+			}
 
-        }
+		}
 
-        $(".sd_cen .txt .cen1:eq(0)").css("margin-left", "10px");
+		$(".sd_cen .txt .cen1:eq(0)").css("margin-left", "10px");
 
-        $(".sd_cen .txt .cen1:eq(0) ul").html(articles1);
+		$(".sd_cen .txt .cen1:eq(0) ul").html(articles1);
 
-        $(".sd_cen .txt .cen1:eq(1) ul").html(articles2);
+		$(".sd_cen .txt .cen1:eq(1) ul").html(articles2);
 
-       // $(".sd_cen .txt .cen1:eq(2) ul").html(articles3);
+		// $(".sd_cen .txt .cen1:eq(2) ul").html(articles3);
 
-        //$(".sd_cen .imgtxt ul").html(imgs);
+		//$(".sd_cen .imgtxt ul").html(imgs);
 
-        rmd_sta = 1;
+		rmd_sta = 1;
 
-    });
+	});
 
 
 
@@ -306,41 +310,46 @@ function my_rmd() {
 
 function close_my_rmd() {
 
-    $(window).unbind("scroll");
+	$(window).unbind("scroll");
 
-    var left = $(".a4").offset().left; 
+	var left = $(".a4").offset().left;
 
-    $(".sd_main").animate({ left: (left + 5) + "px", top: "1px", height: "30px", width: "80px" }, 500, function () {
+	$(".sd_main").animate({
+		left: (left + 5) + "px",
+		top: "1px",
+		height: "30px",
+		width: "80px"
+	}, 500, function() {
 
-        $(".sd_main").attr("style", "");
+		$(".sd_main").attr("style", "");
 
-        $(".sd_main").hide();
+		$(".sd_main").hide();
 
-        $(".a4_1").css("background-color", "#FF0066");
+		$(".a4_1").css("background-color", "#FF0066");
 
-        $(".a4_1").css("color", "#fafafa");
+		$(".a4_1").css("color", "#fafafa");
 
-        var timeout = setTimeout(function () {
+		var timeout = setTimeout(function() {
 
-            $(".a4_1").css("background-color", "#fafafa");
+			$(".a4_1").css("background-color", "#fafafa");
 
-            $(".a4_1").css("color", "#444444");
+			$(".a4_1").css("color", "#444444");
 
-            $(".a4_1").hide();
+			$(".a4_1").hide();
 
-            clearTimeout(timeout);
+			clearTimeout(timeout);
 
-        }, 200);
+		}, 200);
 
-    });
+	});
 
-    $("#screen_msg").remove();
+	$("#screen_msg").remove();
 
-    $("embed[rel='holder']").each(function () {
+	$("embed[rel='holder']").each(function() {
 
-        $(this).show();
+		$(this).show();
 
-    });
+	});
 
 }
 
@@ -348,7 +357,7 @@ function close_my_rmd() {
 
 function ietester() {
 
-    var undef,
+	var undef,
 
 		ie,
 
@@ -358,17 +367,17 @@ function ietester() {
 
 		all = div.getElementsByTagName('i');
 
-    while (
+	while (
 
-			div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+		div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
 
-			all[0]
+		all[0]
 
-		);
+	);
 
-    v > 4 ? ie = v : ie = undef;
+	v > 4 ? ie = v : ie = undef;
 
-    return ie;
+	return ie;
 
 }
 
@@ -578,107 +587,108 @@ function ietester() {
 
 function ResizeImage(src, size) {
 
-    var ret = "";
+	var ret = "";
 
-    try {
+	try {
 
-        ret = src.split('.')[0] + "_" + size + "." + src.split('.')[1];
+		ret = src.split('.')[0] + "_" + size + "." + src.split('.')[1];
 
-    }
+	} catch (e) {}
 
-    catch (e) { }
-
-    return ret;
+	return ret;
 
 }
 
- 
 
-$(function () {
 
-    $("#qzone").hide();
+$(function() {
 
-    if ($("#qzone").length > 0) {
+	$("#qzone").hide();
 
-        var st = setTimeout(function () {
+	if ($("#qzone").length > 0) {
 
-            $("#qzone").attr("src", "http://open.qzone.qq.com/like?url=http%3A%2F%2Fuser.qzone.qq.com%2F19881012&type=button_num&width=400&height=30");
+		var st = setTimeout(function() {
 
-            clearTimeout(st);
+			$("#qzone").attr("src",
+				"http://open.qzone.qq.com/like?url=http%3A%2F%2Fuser.qzone.qq.com%2F19881012&type=button_num&width=400&height=30"
+				);
 
-            $("#qzone").show();
+			clearTimeout(st);
 
-        }, 10000);
+			$("#qzone").show();
 
-    }
+		}, 10000);
 
-    $(document.forms["so_form"]).submit(function () { goSearch(document.forms["so_form"]); return false; });
+	}
+
+	$(document.forms["so_form"]).submit(function() {
+		goSearch(document.forms["so_form"]);
+		return false;
+	});
 
 });
 
 function goSearch() {
 
-    var tO = document.forms["so_form"];
+	var tO = document.forms["so_form"];
 
-    var tStr = tO.t_keywords.value;
+	var tStr = tO.t_keywords.value;
 
-    if (!tStr) return alert('请填写搜索关键字！');
+	if (!tStr) return alert('请填写搜索关键字！');
 
-    tStr = encodeURI("" + tStr);
+	tStr = encodeURI("" + tStr);
 
-    window.open('http://so.7y7.com/cse/search?q=' + tStr + '&s=5364651094490175667');
+	window.open('http://so.7y7.com/cse/search?q=' + tStr + '&s=5364651094490175667');
 
-    return false;
+	return false;
 
 }
 
 function SetCookie(value, name, key) {
 
-    var Days = 2;
+	var Days = 2;
 
-    var exp = new Date();
+	var exp = new Date();
 
-    var domain = "7y7.com";
+	var domain = "7y7.com";
 
-    exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+	exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
 
-    if (key == null || key == "") {
+	if (key == null || key == "") {
 
-        document.cookie = name + "=" + encodeURI(value) + ";expires=" + exp.toGMTString() + ";path=/;domain=" + domain + ";";
+		document.cookie = name + "=" + encodeURI(value) + ";expires=" + exp.toGMTString() + ";path=/;domain=" + domain +
+			";";
 
-    }
+	} else {
 
-    else {
+		var nameValue = getCookie(name);
 
-        var nameValue = getCookie(name);
+		if (nameValue == "") {
 
-        if (nameValue == "") {
+			document.cookie = name + "=" + key + "=" + encodeURI(value) + ";expires=" + exp.toGMTString() +
+				";path=/;domain=" + domain + ";";
 
-            document.cookie = name + "=" + key + "=" + encodeURI(value) + ";expires=" + exp.toGMTString() + ";path=/;domain=" + domain + ";";
+		} else {
 
-        }
+			var keyValue = getCookie(name, key);
 
-        else {
+			if (keyValue != "") {
 
-            var keyValue = getCookie(name, key);
+				nameValue = nameValue.replace(key + "=" + keyValue, key + "=" + encodeURI(value));
 
-            if (keyValue != "") {
+				document.cookie = name + "=" + nameValue + ";expires=" + exp.toGMTString() + ";path=/;domain=" +
+					domain + ";";
 
-                nameValue = nameValue.replace(key + "=" + keyValue, key + "=" + encodeURI(value));
+			} else {
 
-                document.cookie = name + "=" + nameValue + ";expires=" + exp.toGMTString() + ";path=/;domain=" + domain + ";";
+				document.cookie = name + "=" + nameValue + "&" + key + "=" + encodeURI(value) + ";expires=" + exp
+					.toGMTString() + ";path=/;" + domain + ";";
 
-            }
+			}
 
-            else {
+		}
 
-                document.cookie = name + "=" + nameValue + "&" + key + "=" + encodeURI(value) + ";expires=" + exp.toGMTString() + ";path=/;" + domain + ";";
-
-            }
-
-        }
-
-    }
+	}
 
 }
 
@@ -686,35 +696,31 @@ function SetCookie(value, name, key) {
 
 function GetCookie(name, key) {
 
-    var nameValue = "";
+	var nameValue = "";
 
-    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+	var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
 
-    if (arr = document.cookie.match(reg)) {
+	if (arr = document.cookie.match(reg)) {
 
-        nameValue = decodeURI(arr[2]);
+		nameValue = decodeURI(arr[2]);
 
-    }
+	}
 
-    if (key != null && key != "") {
+	if (key != null && key != "") {
 
-        reg = new RegExp("(^| |&)" + key + "=([^(;|&|=)]*)(&|$)");
+		reg = new RegExp("(^| |&)" + key + "=([^(;|&|=)]*)(&|$)");
 
-        if (arr = nameValue.match(reg)) {
+		if (arr = nameValue.match(reg)) {
 
-            return decodeURI(arr[2]);
+			return decodeURI(arr[2]);
 
-        }
+		} else return "";
 
-        else return "";
+	} else {
 
-    }
+		return nameValue;
 
-    else {
-
-        return nameValue;
-
-    }
+	}
 
 }
 
@@ -722,15 +728,15 @@ function GetCookie(name, key) {
 
 function KillCookie(name) {
 
-    var exp = new Date();
+	var exp = new Date();
 
-    exp.setTime(exp.getTime() - 1);
+	exp.setTime(exp.getTime() - 1);
 
-    var cval = getCookie(name);
+	var cval = getCookie(name);
 
 
 
-    if (cval != null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString() + ";domain=7y7.com";
+	if (cval != null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString() + ";domain=7y7.com";
 
 }
 
@@ -740,139 +746,142 @@ function KillCookie(name) {
 
 function shareour() {
 
-    if ($("#share").length > 0) {
+	if ($("#share").length > 0) {
 
-        $("#share").show();
+		$("#share").show();
 
-        return;
+		return;
 
-    }
+	}
 
-    $(document.body).append("<div id=\"share\" style='display:none'>");
+	$(document.body).append("<div id=\"share\" style='display:none'>");
 
-    $("#share").css("top", "100px");
+	$("#share").css("top", "100px");
 
-    var window_w = $(window).width();
+	var window_w = $(window).width();
 
-    var obj_w = $("#share").width();
+	var obj_w = $("#share").width();
 
-    $("#share").css("left", (window_w - obj_w) / 2 + "px");
-
-
-
-    $("#share").append("<div class=\"share_title\">");
+	$("#share").css("left", (window_w - obj_w) / 2 + "px");
 
 
 
-    $("#share .share_title").html("<span class=\"share_title1\">推荐给您的好朋友</span><i class=\"close\"></i>");
-
-    $("#share .share_title .close").click(function () {
-
-        $("#share").fadeOut(100);
-
-    });
-
-    var title = document.title;
-
-    $("#share").append("<div class=\"share_msg\">");
-
-    $("#share .share_msg").html("Hi，感谢您浏览七丽女性网，如果您觉得我们网站不错的话，可以点击下方按钮直接分享给您的好友。");
-
-    var obj = $("#jiathis_style_32x32");
-
-    $("#jiathis_style_32x32").remove();
+	$("#share").append("<div class=\"share_title\">");
 
 
 
+	$("#share .share_title").html("<span class=\"share_title1\">推荐给您的好朋友</span><i class=\"close\"></i>");
+
+	$("#share .share_title .close").click(function() {
+
+		$("#share").fadeOut(100);
+
+	});
+
+	var title = document.title;
+
+	$("#share").append("<div class=\"share_msg\">");
+
+	$("#share .share_msg").html("Hi，感谢您浏览七丽女性网，如果您觉得我们网站不错的话，可以点击下方按钮直接分享给您的好友。");
+
+	var obj = $("#jiathis_style_32x32");
+
+	$("#jiathis_style_32x32").remove();
 
 
-    $("#share").fadeIn(100, function () {
 
-        $("#share").append(obj);
 
-        $("#share #jiathis_style_32x32").show();
 
-        $("#share #jiathis_style_32x32").css("padding", "10px");
+	$("#share").fadeIn(100, function() {
 
-        $("#share #jiathis_style_32x32").css("clear", "both");
+		$("#share").append(obj);
 
-        $("#share .jiathis").css("font-size", "16px");
+		$("#share #jiathis_style_32x32").show();
 
-        $("#share .jiathis").css("font-family", "Microsoft Yahei");
+		$("#share #jiathis_style_32x32").css("padding", "10px");
 
-    });
+		$("#share #jiathis_style_32x32").css("clear", "both");
+
+		$("#share .jiathis").css("font-size", "16px");
+
+		$("#share .jiathis").css("font-family", "Microsoft Yahei");
+
+	});
 
 }
 
 function copycilp(txt) {
 
-    txt = txt.replace(/<br>/g, "\r\n")
+	txt = txt.replace(/<br>/g, "\r\n")
 
-    if (window.clipboardData) {
+	if (window.clipboardData) {
 
-        window.clipboardData.clearData();
+		window.clipboardData.clearData();
 
-        window.clipboardData.setData("Text", txt);
+		window.clipboardData.setData("Text", txt);
 
-        return true;
+		return true;
 
-    } else if (navigator.userAgent.indexOf("Opera") != -1) {
+	} else if (navigator.userAgent.indexOf("Opera") != -1) {
 
-        window.location = txt;
+		window.location = txt;
 
-        return true;
+		return true;
 
-    } else if (window.netscape) {
+	} else if (window.netscape) {
 
-        try {
+		try {
 
-            netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+			netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
 
-        } catch (e) {
+		} catch (e) {
 
-            alert("被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
+			alert("被浏览器拒绝！\n请在浏览器地址栏输入'about:config'并回车\n然后将'signed.applets.codebase_principal_support'设置为'true'");
 
-            return false;
+			return false;
 
-        }
+		}
 
-        var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces.nsIClipboard);
+		var clip = Components.classes['@mozilla.org/widget/clipboard;1'].createInstance(Components.interfaces
+			.nsIClipboard);
 
-        if (!clip)
+		if (!clip)
 
-            return false;
+			return false;
 
-        var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces.nsITransferable);
+		var trans = Components.classes['@mozilla.org/widget/transferable;1'].createInstance(Components.interfaces
+			.nsITransferable);
 
-        if (!trans)
+		if (!trans)
 
-            return false;
+			return false;
 
-        trans.addDataFlavor('text/unicode');
+		trans.addDataFlavor('text/unicode');
 
-        var str = new Object();
+		var str = new Object();
 
-        var len = new Object();
+		var len = new Object();
 
-        var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces.nsISupportsString);
+		var str = Components.classes["@mozilla.org/supports-string;1"].createInstance(Components.interfaces
+			.nsISupportsString);
 
-        var copytext = txt;
+		var copytext = txt;
 
-        str.data = copytext;
+		str.data = copytext;
 
-        trans.setTransferData("text/unicode", str, copytext.length * 2);
+		trans.setTransferData("text/unicode", str, copytext.length * 2);
 
-        var clipid = Components.interfaces.nsIClipboard;
+		var clipid = Components.interfaces.nsIClipboard;
 
-        if (!clip)
+		if (!clip)
 
-            return false;
+			return false;
 
-        clip.setData(trans, null, clipid.kGlobalClipboard);
+		clip.setData(trans, null, clipid.kGlobalClipboard);
 
-        return true;
+		return true;
 
-    }
+	}
 
 
 
@@ -882,25 +891,25 @@ function resetimgsize(img, width) {
 
 
 
-    if (img.width > width) {
+	if (img.width > width) {
 
-        img.width = width;
+		img.width = width;
 
 
 
-        $(img).css("margin", "0 auto");
+		$(img).css("margin", "0 auto");
 
-    }
+	}
 
 }
 
 function getPath(id) {
 
-    id = "" + id;
+	id = "" + id;
 
-    var len = id.split("").length;
+	var len = id.split("").length;
 
-    return ((len > 1) ? id.substr(len - 2, len) : "0" + id) + "/" + id + ".html";
+	return ((len > 1) ? id.substr(len - 2, len) : "0" + id) + "/" + id + ".html";
 
 }
 
@@ -910,51 +919,47 @@ function getPath(id) {
 
 function ParseArticlePath(id, rootpath, isSubDomain1, isSubDomain2) {
 
-    var url = "";
+	var url = "";
 
-    url = "http://www.7y7.com/" + rootpath + "/" + getPath(id);
+	url = "http://www.7y7.com/" + rootpath + "/" + getPath(id);
 
-    return url;
+	return url;
 
 }
 
 function ParseRootPath(id, rootpath, isSubDomain1) {
 
-    var url = "";
+	var url = "";
 
-    if (isSubDomain1 > 0) {
+	if (isSubDomain1 > 0) {
 
-        url = "http://" + rootpath + ".7y7.com/";
+		url = "http://" + rootpath + ".7y7.com/";
 
-    }
+	} else {
 
-    else {
+		url = "http://www.7y7.com/" + rootpath + "/";
 
-        url = "http://www.7y7.com/" + rootpath + "/";
+	}
 
-    }
-
-    return url;
+	return url;
 
 }
 
 function ParseSubRootPath(id, rootpath, isSubDomain1, isSubDomain2) {
 
-    var url = "";
+	var url = "";
 
-    if (isSubDomain2 > 0) {
+	if (isSubDomain2 > 0) {
 
-        url = "http://" + rootpath + ".7y7.com/";
+		url = "http://" + rootpath + ".7y7.com/";
 
-    }
+	} else {
 
-    else {
+		url = "http://www.7y7.com/" + rootpath + "/";
 
-        url = "http://www.7y7.com/" + rootpath + "/";
+	}
 
-    }
-
-    return url;
+	return url;
 
 }
 
@@ -962,9 +967,9 @@ function ParseSubRootPath(id, rootpath, isSubDomain1, isSubDomain2) {
 
 function fontsize(size) {
 
-    $(".jies").css("font-size", size + "px");
+	$(".jies").css("font-size", size + "px");
 
-    $(".li_daodu").css("font-size", size + "px");
+	$(".li_daodu").css("font-size", size + "px");
 
 }
 
@@ -972,7 +977,7 @@ function fontsize(size) {
 
 function openQQ() {
 
-    var A = window.open("http://www.7y7.com/api/logintoqq.aspx");
+	var A = window.open("http://www.7y7.com/api/logintoqq.aspx");
 
 }
 
@@ -980,79 +985,74 @@ function openQQ() {
 
 function openUrl(url) {
 
-    var A = window.open(url);
+	var A = window.open(url);
 
 }
 
 function AddFavorite(sURL, sTitle) {
 
-    try {
+	try {
 
-        window.external.addFavorite(sURL, sTitle);
+		window.external.addFavorite(sURL, sTitle);
 
-    }
+	} catch (e) {
 
-    catch (e) {
+		try {
 
-        try {
+			window.sidebar.addPanel(sTitle, sURL, "");
 
-            window.sidebar.addPanel(sTitle, sURL, "");
+		} catch (e) {
 
-        }
+			alert("加入收藏失败，请使用Ctrl+D进行添加");
 
-        catch (e) {
+		}
 
-            alert("加入收藏失败，请使用Ctrl+D进行添加");
-
-        }
-
-    }
+	}
 
 }
 
 function SetHome(obj, vrl) {
 
-    try {
+	try {
 
-        obj.style.behavior = 'url(#default#homepage)'; obj.setHomePage(vrl);
+		obj.style.behavior = 'url(#default#homepage)';
+		obj.setHomePage(vrl);
 
-    }
+	} catch (e) {
 
-    catch (e) {
+		if (window.netscape) {
 
-        if (window.netscape) {
+			try {
 
-            try {
+				netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
 
-                netscape.security.PrivilegeManager.enablePrivilege("UniversalXPConnect");
+			} catch (e) {
 
-            }
+				alert(
+					"此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
 
-            catch (e) {
+			}
 
-                alert("此操作被浏览器拒绝！\n请在浏览器地址栏输入“about:config”并回车\n然后将 [signed.applets.codebase_principal_support]的值设置为'true',双击即可。");
+			var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces
+				.nsIPrefBranch);
 
-            }
+			prefs.setCharPref('browser.startup.homepage', vrl);
 
-            var prefs = Components.classes['@mozilla.org/preferences-service;1'].getService(Components.interfaces.nsIPrefBranch);
+		}
 
-            prefs.setCharPref('browser.startup.homepage', vrl);
-
-        }
-
-    }
-
-}
-
-String.prototype.Trim = function () {
-
-    return this.replace(/^\s+/g, "").replace(/\s+$/g, "");
+	}
 
 }
 
-String.prototype.DelBr = function () {
+String.prototype.Trim = function() {
 
-    return this.replace(/\r\n/g, "");
+	return this.replace(/^\s+/g, "").replace(/\s+$/g, "");
+
+}
+
+String.prototype.DelBr = function() {
+
+	return this.replace(/\r\n/g, "");
 
 }
 
@@ -1060,7 +1060,7 @@ String.prototype.DelBr = function () {
 
 function delHtmlTag(str) {
 
-    return str.replace(/<[^>]+>/g, "");  
+	return str.replace(/<[^>]+>/g, "");
 
 }
 
@@ -1072,9 +1072,9 @@ function byteLength(sStr) {
 
 
 
-    aMatch = sStr.match(/[^\x00-\x80]/g);
+	aMatch = sStr.match(/[^\x00-\x80]/g);
 
-    return (sStr.length + (!aMatch ? 0 : aMatch.length));
+	return (sStr.length + (!aMatch ? 0 : aMatch.length));
 
 }
 
@@ -1086,35 +1086,35 @@ function changeMaxLen(obj, len1, location) {
 
 
 
-    var len = len1;
+	var len = len1;
 
-    var num = 0;
+	var num = 0;
 
-    var strlen = 0;
+	var strlen = 0;
 
-    var obj_value_arr = obj.value.split("");
+	var obj_value_arr = obj.value.split("");
 
-    for (var i = 0; i < obj_value_arr.length; i++) {
+	for (var i = 0; i < obj_value_arr.length; i++) {
 
-        if (i < len && num + byteLength(obj_value_arr[i]) <= len) {
+		if (i < len && num + byteLength(obj_value_arr[i]) <= len) {
 
-            num += byteLength(obj_value_arr[i]);
+			num += byteLength(obj_value_arr[i]);
 
-            strlen = i + 1;
+			strlen = i + 1;
 
-        }
+		}
 
-    }
+	}
 
-    if (obj.value.length > strlen) {
+	if (obj.value.length > strlen) {
 
-        obj.value = obj.value.substr(0, strlen);
+		obj.value = obj.value.substr(0, strlen);
 
-    }
+	}
 
-    var lenText = document.getElementById('lenSpan' + location);
+	var lenText = document.getElementById('lenSpan' + location);
 
-    lenText.innerHTML = len - byteLength(obj.value);
+	lenText.innerHTML = len - byteLength(obj.value);
 
 
 
@@ -1124,45 +1124,76 @@ function changeMaxLen(obj, len1, location) {
 
 function getPhotoPath(type) {
 
-    var str = "";
+	var str = "";
 
-    switch (type) {
+	switch (type) {
 
-        case "明星写真":
+		case "明星写真":
 
-            str = "xiezhen";
+			str = "xiezhen";
 
-            break;
+			break;
 
-        case "清纯美女":
+		case "清纯美女":
 
-            str = "meinv";
+			str = "meinv";
 
-            break;
+			break;
 
-        case "时尚大片":
+		case "时尚大片":
 
-            str = "dapian";
+			str = "dapian";
 
-            break;
+			break;
 
-        case "性感尤物":
+		case "性感尤物":
 
-            str = "youwu";
+			str = "youwu";
 
-            break;
+			break;
 
-        default: str = "";
+		default:
+			str = "";
 
-            break;
+			break;
 
-    }
+	}
 
-    return str;
+	return str;
 
 }
 
 
 
-function AddFavorite(sURL, sTitle) { try { window.external.addFavorite(sURL, sTitle); } catch (e) { try { window.sidebar.addPanel(sTitle, sURL, ""); } catch (e) { alert("加入收藏失败，请使用Ctrl+D进行添加"); } } }
+function AddFavorite(sURL, sTitle) {
+	try {
+		window.external.addFavorite(sURL, sTitle);
+	} catch (e) {
+		try {
+			window.sidebar.addPanel(sTitle, sURL, "");
+		} catch (e) {
+			alert("加入收藏失败，请使用Ctrl+D进行添加");
+		}
+	}
+}
 
+$(function(){
+	function hide_header(){
+		// 第一个wz元素距离顶部的位置
+		var wz_top = $("#content").offset().top
+		// 头部导航栏元素的高度
+		var header = $('#header').height()
+		// 头部需要隐藏时滚动条距离顶部的距离
+		var hide_header_height = wz_top - header
+		// 监听滚动，显示或隐藏头部
+		$(document).scroll(function(){
+			var top = $(window).scrollTop()
+			if(top >= hide_header_height){
+				$('#header').fadeOut()
+			}else{
+				$('#header').fadeIn()
+			}
+		})
+	}
+	hide_header()
+})

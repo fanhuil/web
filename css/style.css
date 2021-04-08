@@ -1,123 +1,22 @@
-/* CSS Document */
-@charset "gb2312";
 
-* {
-	marigin: 0px;
-	padding: 0px;
-}
-
-body {
-	font-size: 14px;
-	font-family: "微软雅黑";
-	background: #efefef;
-	color: #5d5d5d;
-}
-
-a {
-	text-decoration: none;
-}
-
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
-
-.clear {
-	clear: both;
-}
-
-li {
-	list-style: none;
-}
-
-img {
-	display: block;
-	border: 0px;
-}
-
-/*end*/
-.weizi {
-	height: 50px;
-	line-height: 50px;
-	background: url("../images/weizi.png") 7px 15px no-repeat;
-	background-color: #fff;
-	border-bottom: 1px solid #ccc;
-}
-
-.weizi .wz_text {
-	font-size: 16px;
-	color: #444;
-	padding-left: 25px;
-}
-
-.weizi .wz_text h1 {
-	font-size: 16px;
-	color: #F00E71;
-	display: inline;
-	font-weight: 500;
-}
-
-.weizi .wz_text a {
-	color: #444;
-}
-
-.weizi .wz_text a:hover {
-	text-decoration: underline;
-	color: #f00;
-}
-
-/*about*/
+/* 关于我 Begin*/
 #content #about_me {
-	width: 730px;
+	width: 68%;
 	height: 500px;
 }
 
 #about_me .about_content {
-	width: 710px;
 	height: 300px;
 	margin-top: 10px;
-	padding: 0 10px;
+	padding: 15px 10px;
 	background-color: #fff;
 }
+/* 关于我 End */
 
-/*碎言碎语*/
+/* 碎言碎语 Begin*/
 #say {
-	width: 950px;
+	width: 1000px;
 	margin: 100px auto;
-}
-
-#say .weizi {
-	width: 920px;
-	height: 50px;
-	line-height: 50px;
-	background: url("../images/weizi.png") 7px 15px no-repeat;
-	background-color: #fff;
-	border-radius: 3px;
-}
-
-.weizi .wz_text {
-	font-size: 16px;
-	color: #444;
-	padding-left: 25px;
-}
-
-.weizi .wz_text h1 {
-	font-size: 16px;
-	color: #F00E71;
-	display: inline;
-	font-weight: 500;
-}
-
-.weizi .wz_text a {
-	color: #444;
-}
-
-.weizi .wz_text a:hover {
-	text-decoration: underline;
-	color: #f00;
 }
 
 .say_box {
@@ -195,14 +94,13 @@ img {
 	font-size: 14px;
 }
 
-/*日记*/
+/* 个人日记 Begin*/
 #content #riji {
-	width: 730px;
-	background: #fff;
+	width: 68%;
 }
 
 #riji .rj_content {
-	width: 710px;
+	/* width: 710px; */
 	margin-top: 10px;
 	padding: 0 10px;
 	background: #fff;
@@ -210,7 +108,7 @@ img {
 }
 
 .rj_content .shiguang {
-	width: 710px;
+	width: 650px;
 	height: 145px;
 }
 
@@ -229,7 +127,7 @@ img {
 }
 
 .rj_content .shiguang .sg_text {
-	width: 530px;
+	width: 480px;
 	height: 100px;
 	background: #fff;
 	border: 1px solid #E0DFDF;
@@ -257,8 +155,8 @@ img {
 	background: #fff;
 }
 
-#content_xc .weizi {
-	width: 990px;
+#content_xc .position {
+	width: 1000px;
 	height: 50px;
 	line-height: 50px;
 	background: url("../images/weizi.png") 7px 15px no-repeat;
@@ -266,34 +164,12 @@ img {
 	border-bottom: 1px solid #ccc;
 }
 
-.weizi .wz_text {
-	font-size: 16px;
-	color: #444;
-	padding-left: 25px;
-}
-
-.weizi .wz_text h1 {
-	font-size: 16px;
-	color: #F00E71;
-	display: inline;
-	font-weight: 500;
-}
-
-.weizi .wz_text a {
-	color: #444;
-}
-
-.weizi .wz_text a:hover {
-	text-decoration: underline;
-	color: #f00;
-}
-
 #content_xc .xc_content {
-	width: 990px;
+	width: 1000px;
 }
 
 .xc_content .con-bg {
-	width: 990px;
+	width: 1000px;
 	background: #fff;
 	margin: 0 auto;
 	overflow: hidden;
@@ -327,18 +203,6 @@ img {
 	width: 960px;
 }
 
-.position {
-	height: 38px;
-	line-height: 38px;
-	font-size: 14px;
-	color: #666;
-	border-bottom: none;
-}
-
-.position a {
-	padding: 0px 5px;
-	color: #404040;
-}
 
 .position a.home {
 	background: url(../images/flower_ico.gif) no-repeat;
@@ -418,20 +282,24 @@ span.bds_more {
 
 /*学无止境*/
 #content #learn {
-	width: 730px;
-	background: #fff;
+	width: 68%;
+	/* background: #fff; */
 }
 
 #learn .l_content {
-	width: 710px;
+	/* width: 710px; */
 	margin-top: 10px;
-	padding: 0 10px;
+	/* padding: 0 10px; */
 }
 
 #learn .l_content .wz {
-	width: 725px;
-	margin: 5px 0px 10px 0px;
-	color: #444;
+    background: rgba(255,255,255,0.8);
+    padding: 15px;
+    overflow: hidden;
+    color: #797b7c;
+    margin-bottom: 20px;
+	/* width: 730px; */
+	box-sizing: border-box;
 }
 
 /*news*/
@@ -510,7 +378,6 @@ span.bds_more {
 #content #guestbook {
 	width: 730px;
 	height: 500px;
-	background: #fff;
 }
 
 #guestbook .g_content {
@@ -518,63 +385,6 @@ span.bds_more {
 	height: 300px;
 	margin-top: 10px;
 	padding: 0 10px;
-}
-/* 查看更多 */
-.more{
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	margin: 10px 0;
-	background-color: rgba(255,255,255,0.8);
-}
-
-.more a{
-	color: #797b7c;
-}
-
-.more a:hover{
-	color: pink;
-}
-
-/* 搜索框 */
-.search{
-	position: relative;
-	border-radius: 0 5px 5px 0;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	width: 260px;
-	background-color:#1D1718 ;
-}
-
-.search .search_input{
-	height: 30px;
-	width: 200px;
-	outline:0;
-	border: 1px solid #000000;
-}
-input::-webkit-input-placeholder{
-  color:rgb(153, 153, 153);
-  padding-left: 10px;
-}
-input::-moz-placeholder{   /* Mozilla Firefox 19+ */
-  color:rgb(153, 153, 153);
-  padding-left: 10px;
-}
-input:-moz-placeholder{    /* Mozilla Firefox 4 to 18 */
-  color:rgb(153, 153, 153);
-  padding-left: 10px;
-}
-.search_input input:-ms-input-placeholder{  /* Internet Explorer 10-11 */
-  color:rgb(153, 153, 153);
-  padding-left: 10px;
-}
-.search .search_submit{
-	border: 0;
-	background:0;
-	color: #FFFFFF;
-	outline: 0;
-	display: inline-block;
-	position: absolute;
-	top:8px;
-	right: 6%;
+	background-color: #fff;
+	padding-top: 15px;
 }
