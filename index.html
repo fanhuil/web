@@ -183,7 +183,7 @@
 			<div class="clear"></div>
 		</div>
 		<!-- content end -->
-
+		<?php echo '<p>Hello World</p>'; ?>
 		<!-- footer -->
 		<div>
 			<div id="footer">
@@ -194,28 +194,27 @@
 		
 		<script type="text/javascript" src="js/nav.js"></script>
 		<script type="text/javascript">
-			// var o = new Object()
-			// function Foo(){
+			
+			// Object
+			var o = new Object()
+			// Function
+			var fun = new Function()
+			
+			// Foo
+			function Foo(){
 				
-			// }
-			// var f = new Foo()
+			}
+			var f = new Foo()
+			
+			
 
-			// console.log('=============关于Foo原型================')
-			// console.log(f)
-			// console.log(Foo)
-			// console.log(f.__proto__)
-			// console.log(Foo.prototype.__proto__)
-			// console.log(Foo.prototype.constructor)
-			// console.log('=============关于Object原型================')
-			// console.log(o)
-			// console.log(Object)
-			// console.log(o.__proto__)
-			// console.log(Object.prototype)
-			// console.log(Object.prototype.constructor)
-			// console.log('=============关于Function原型================')
-			// console.log(Function)
-			// console.log(Function.__proto__)
-			// console.log(Function.prototype.constructor)
+			console.log('=============关于Foo原型================')
+			console.log(o)
+			console.log(fun)
+			console.log(f)
+			// console.log(Foo.prototype)
+			// console.log(Foo.__proto__ == Function.prototype)
+			// console.log(Function.prototype == Function.__proto__)
 		</script>
 	</body>
 </html>
